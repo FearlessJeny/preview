@@ -1,0 +1,184 @@
+body {
+  background-color: #222457;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+.phone {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #eee;
+  border-radius: 15px;
+  height: 450px;
+  width: 390px;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+ border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  html {
+    width: 100%;
+  }
+  li {
+    width: 10%;
+  }
+}
+
+
+.phone .content {
+  opacity: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px);
+  width: 100%;
+  transition: opacity 0.4s ease;
+}
+
+.phone .content.show {
+  opacity: 1;
+}
+
+.ico {
+  display: none;
+
+  flex-wrap: wrap;
+ 
+ 
+  top: 10px;
+
+  z-index: 999;
+}
+
+.ico.show {
+  display: block;
+}
+
+/* нижнее меню */
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 60px;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  color: #6461a2;
+  cursor: pointer;
+}
+
+nav li.active,
+nav li:hover {
+  color: #222457;
+}
+  
+
+
+.hexagon-wrapper {
+  margin: auto;
+  display: flex;
+  
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+ .hexagon { 
+  position: relative;
+  width: 46%;
+  height: 80%;
+  margin: auto;
+  color: white;
+  background: linear-gradient(-180deg, white, #fda3b2);
+  margin-top: 2rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.5s;
+ } 
+
+.hexagon i {
+  z-index: 1000;
+  margin: auto;
+  font-size: 50px;
+
+  /* background: linear-gradient(45deg, #a58fe9, #e37682); */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+}
+
+
+
+.fa-instagram {
+  color: #c74bbd;
+}
+.fa-whatsapp {
+  color: rgb(1, 105, 1);
+}
+.fa-facebook {
+  color: blue;
+}
+.fa-location-dot {
+ 
+ color: red;
+}
+
+
+.hexagon:before,
+.hexagon:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.hexagon:before {
+  transform: rotateZ(60deg);
+}
+.hexagon:after {
+  transform: rotateZ(-60deg);
+}
+.hexagon:hover {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:before {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:after {
+  border-radius: 50px;
+  transition: 0.5s;
+}
